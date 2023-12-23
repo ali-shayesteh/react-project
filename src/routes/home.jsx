@@ -1,8 +1,9 @@
+import { DocumentIcon } from "@heroicons/react/24/outline";
 import avatar1 from "../assets/avatar1.png";
 import shiraz from "../assets/shiraz-university-logo.png";
 import { TEXT_HOME as TEXT, HOME_TABLE } from "../constants/texts";
-import vue from "../assets/vue.svg"
-import react from "../assets/react.svg"
+import vue from "../assets/vue.svg";
+import react from "../assets/react.svg";
 
 export default function Home() {
   return (
@@ -38,11 +39,13 @@ export default function Home() {
         </div>
       </div>
       <div className="border border-slate-300 rounded-xl p-8 mt-8">
-        <h2 className="text-slate-500 text-lg">{TEXT.tableTitle}</h2>
-        <div className="mt-6 border rounded-lg">
+        <h2 className="text-slate-600 text-lg flex gap-1 items-center">
+          <DocumentIcon className="w-5 h-5 text-slate-400" /> {TEXT.tableTitle}
+        </h2>
+        <div className="mt-6 border rounded-lg overflow-hidden">
           <table className="lib-table">
             <tbody>
-              <tr>
+              <tr className="bg-slate-50">
                 <td></td>
                 <td>
                   <img src={react} className="w-8 h-8" />
@@ -54,8 +57,8 @@ export default function Home() {
               {HOME_TABLE.map((row) => (
                 <tr key={row.heading}>
                   <th>{row.heading}</th>
-                  {row.values.map((item) => (
-                    <td key={item.link}>
+                  {row.values.map((item, idx) => (
+                    <td key={idx}>
                       <a
                         target="_blank"
                         rel="noreferrer"
@@ -64,7 +67,7 @@ export default function Home() {
                       >
                         {item.name}
                       </a>
-                      <span className="text-sm">{item.npm}</span>
+                      <span className="text-sm text-slate-500">{item.npm}</span>
                     </td>
                   ))}
                 </tr>

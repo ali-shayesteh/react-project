@@ -13,7 +13,7 @@ export const TEXT_HOME ={
 
   export const HOME_TABLE = [
     {
-      heading: 'Framework',
+      heading: 'framework',
       values:[ { name: 'Reactjs', link: 'https://react.dev/', npm: 'react, react-dom v18.2.0' },
       { name: 'Vuejs', link: 'https://vuejs.org/', npm: 'vue v3.3.4' } ]
     },

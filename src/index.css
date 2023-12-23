@@ -11,7 +11,7 @@
 }
 
 .lib-table tr {
-  @apply table-row border-b last:border-none hover:bg-slate-50 text-base;
+  @apply table-row border-b last:border-none hover:bg-slate-100  text-base;
 }
 
 .lib-table td,
