@@ -3,5 +3,22 @@
 @tailwind utilities;
 
 .main-container {
-    @apply container max-w-6xl mx-auto;
+  @apply container max-w-6xl mx-auto;
+}
+
+.lib-table {
+  @apply table w-full border-slate-300;
+}
+
+.lib-table tr {
+  @apply table-row border-b last:border-none hover:bg-slate-50 text-base;
+}
+
+.lib-table td,
+.lib-table th {
+  @apply table-cell border-r last:border-none py-3 px-6;
+}
+
+.lib-table th {
+    @apply font-normal text-slate-500
 }
