@@ -10,6 +10,10 @@ const StockChart = ({ data }) => {
         type: "candlestick",
       },
 
+      credits: {
+        enabled: false,
+      },
+
       title: {
         text: "Sample stock chart",
       },
@@ -23,7 +27,7 @@ const StockChart = ({ data }) => {
   );
 
   return (
-    <div>
+    <div className="border rounded-lg p-3">
       <HighchartsReact
         highcharts={Highcharts}
         constructorType={"stockChart"}

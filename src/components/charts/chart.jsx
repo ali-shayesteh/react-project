@@ -1,19 +1,8 @@
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 
-const options = {
-  title: {
-    text: "Sample line chart",
-  },
-  series: [
-    {
-      data: [1, 2, 3, 4, 7, 8, 3, 6, 3, 7, 9, 2],
-    },
-  ],
-};
-
-const Chart = () => (
-  <div>
+const Chart = ({options}) => (
+  <div  className="border rounded-lg p-3">
     <HighchartsReact highcharts={Highcharts} options={options} />
   </div>
 );

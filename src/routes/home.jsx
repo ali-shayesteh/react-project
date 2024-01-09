@@ -38,8 +38,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="border border-slate-300 rounded-xl p-8 mt-8">
-        <h2 className="text-slate-600 text-lg flex gap-1 items-center">
+      <div className="border-t border-slate-300 pt-8 mt-8">
+        <h2 className="text-slate-600 text-xl flex gap-1 items-center">
           <DocumentIcon className="w-5 h-5 text-slate-400" /> {TEXT.tableTitle}
         </h2>
         <div className="mt-6 border rounded-lg overflow-hidden">

@@ -20,5 +20,14 @@
 }
 
 .lib-table th {
-    @apply font-normal text-slate-500
+  @apply font-normal text-slate-500;
+}
+.divider {
+  @apply border-b border-slate-300 my-8;
+}
+.slider-center .slick-center div {
+  @apply origin-center scale-110 transition-all;
+}
+.slider-center  div {
+  @apply origin-center transition-all;
 }

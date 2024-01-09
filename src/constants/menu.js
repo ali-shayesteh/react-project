@@ -8,7 +8,11 @@ export const menu =  [
         href: "/charts"
     },
     {
-        title: "Table",
-        href: "/table"
+        title: "Tables",
+        href: "/tables"
+    },
+    {
+        title: "Sliders",
+        href: "/sliders"
     }
 ]

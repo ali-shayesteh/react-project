@@ -2,11 +2,13 @@ import { createBrowserRouter } from "react-router-dom";
 import Root from "./routes/root";
 import ErrorPage from "./error-page";
 import Home from "./routes/home";
-import Charts from "./routes/charts";
+import Charts from "./routes/charts/charts";
+import Tables from "./routes/tables/tables";
+import Sliders from "./routes/sliders/sliders";
 
-const opts = {
-  basename: "/react-project"
-}
+const options = {
+  basename: "/react-project",
+};
 
 const routes = [
   {
@@ -15,14 +17,22 @@ const routes = [
     children: [
       {
         path: "/",
-        element: <Home />
+        element: <Home />,
       },
       {
         path: "/charts",
         element: <Charts />,
       },
+      {
+        path: "/tables",
+        element: <Tables />,
+      },
+      {
+        path: "/sliders",
+        element: <Sliders />,
+      },
     ],
   },
-]
+];
 
-export const router = createBrowserRouter(routes, opts);
+export const router = createBrowserRouter(routes, options);
