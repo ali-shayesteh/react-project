@@ -5,6 +5,7 @@ import Home from "./routes/home";
 import Charts from "./routes/charts/charts";
 import Tables from "./routes/tables/tables";
 import Sliders from "./routes/sliders/sliders";
+import Sample from "./routes/sample/sample";
 
 const options = {
   basename: "/react-project",
@@ -19,6 +20,11 @@ const routes = [
         path: "/",
         element: <Home />,
       },
+      {
+        path: "/sample",
+        element: <Sample />,
+      },
+
       {
         path: "/charts",
         element: <Charts />,

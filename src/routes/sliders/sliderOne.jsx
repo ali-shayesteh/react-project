@@ -1,29 +1,38 @@
 import SliderMain from "../../components/slider/sliderMain";
-import abstract01 from "../../assets/img/slider1/abstract01.jpg";
-import abstract02 from "../../assets/img/slider1/abstract02.jpg";
-import abstract03 from "../../assets/img/slider1/abstract03.jpg";
-import abstract04 from "../../assets/img/slider1/abstract04.jpg";
+
+import slider1 from "../../assets/img/slider2/slider1.jpg";
+import slider2 from "../../assets/img/slider2/slider2.jpg";
+import slider3 from "../../assets/img/slider2/slider3.jpg";
 
 const settings = {
-  dots: true,
-  fade: true,
+  dots: false,
+  arrows: false,
   infinite: true,
+  autoplay: true,
   speed: 500,
   slidesToShow: 1,
   slidesToScroll: 1,
 };
 
-const slides = [abstract01, abstract02, abstract03, abstract04];
+const slides = [slider1, slider2, slider3];
 
 export default function SliderOne() {
   return (
-    <div className="border rounded-lg p-10 bg-slate-200">
+    <div className="bg-white">
       <SliderMain settings={settings}>
-        {slides.map((slide, idx) => (
-          <div key={idx} className="w-full">
-            <img className="mx-auto" src={slide} />
-          </div>
-        ))}
+        {slides.map((slide, idx) => {
+          return (
+            <div key={idx}>
+              <div
+                style={{
+                  background: `url('${slide}') center center no-repeat`,
+                  backgroundSize: "cover",
+                }}
+                className={`w-full h-96 rounded`}
+              />
+            </div>
+          );
+        })}
       </SliderMain>
     </div>
   );

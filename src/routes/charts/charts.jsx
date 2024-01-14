@@ -1,5 +1,8 @@
-import { useEffect, useRef, useState } from "react";
+// hooks
+import useChart from "../../hooks/useChart";
+// layout
 import PageLayout from "../../layouts/pageLayout";
+// compponents
 import StockChart from "../../components/charts/stockChart";
 import Chart from "../../components/charts/chart";
 import { DocumentChartBarIcon } from "@heroicons/react/24/outline";
@@ -9,26 +12,7 @@ import pieChartOptions from "./pieChartOptions";
 import barChartOptions from "./barChartOprions";
 
 const Charts = () => {
-  const [data, setData] = useState([]);
-
-  const getRef = useRef(false);
-
-  useEffect(() => {
-    if (getRef.current) return;
-    getRef.current = true;
-
-    const getData = async () => {
-      const data = await fetch(
-        "https://demo-live-data.highcharts.com/aapl-ohlc.json"
-      ).then((response) => response.json());
-
-      setData(data);
-    };
-    getData();
-
-    return () => setData([]);
-  }, []);
-
+  const { data } = useChart();
   return (
     <PageLayout title={"Charts"} Icon={DocumentChartBarIcon}>
       <StockChart data={data} />
