@@ -4,11 +4,6 @@ export const menu = [
     href: "/",
   },
   {
-    title: "Sample",
-    href: "/sample",
-  },
-
-  {
     title: "Charts",
     href: "/charts",
   },
