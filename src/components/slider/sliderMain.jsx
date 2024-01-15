@@ -1,12 +1,20 @@
-import Slider from "react-slick";
-// Import css files
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { register } from "swiper/element/bundle";
+register();
 
-export default function SliderMain({children, settings}) {
+export default function SliderMain({ slides, settings }) {
   return (
-    <Slider {...settings}>
-     {children}
-    </Slider>
+    <swiper-container {...settings}>
+      {slides.map((slide, index) => (
+        <swiper-slide key={index}>
+          <div
+            style={{
+              background: `url('${slide}') center center no-repeat`,
+              backgroundSize: "cover",
+            }}
+            className="w-full h-96 rounded"
+          />
+        </swiper-slide>
+      ))}
+    </swiper-container>
   );
 }

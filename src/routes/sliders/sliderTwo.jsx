@@ -5,12 +5,13 @@ import abstract03 from "../../assets/img/slider1/abstract03.jpg";
 import abstract04 from "../../assets/img/slider1/abstract04.jpg";
 
 const settings = {
-  className: "slider-center",
-  centerMode: true,
-  infinite: true,
-  centerPadding: "60px",
-  slidesToShow: 3,
-  speed: 500
+  "slides-per-view": 2,
+  "space-between": 10,
+  "centered-slides": false,
+  navigation: true,
+  pagination: true,
+  autoplay: true,
+  delay: 2000,
 };
 
 const slides = [abstract01, abstract02, abstract03, abstract04];
@@ -18,13 +19,7 @@ const slides = [abstract01, abstract02, abstract03, abstract04];
 export default function SliderTwo() {
   return (
     <div className="border rounded-lg p-10 bg-slate-200">
-      <SliderMain settings={settings}>
-        {slides.map((slide, idx) => (
-          <div key={idx}>
-            <img src={slide} />
-          </div>
-        ))}
-      </SliderMain>
+      <SliderMain settings={settings} slides={slides} />
     </div>
   );
 }
