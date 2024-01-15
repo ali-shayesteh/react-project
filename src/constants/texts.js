@@ -45,6 +45,55 @@ export const HOME_TABLE = [
       },
     ],
   },
+
+  {
+    heading: "sliders",
+    values: [
+      {
+        name: "Swiperjs",
+        npm: "swiper v11.0.5",
+        link: "https://swiperjs.com/react",
+      },
+      {
+        name: "Swiperjs",
+        npm: "swiper v11.0.5",
+        link: "https://swiperjs.com/vue",
+      },
+    ],
+  },
+
+  {
+    heading: "charts",
+    values: [
+      {
+        name: "Highcharts",
+        npm: "highcharts-react-official v3.2.1",
+        link: "https://www.highcharts.com/integrations/react/",
+      },
+      {
+        name: "Highcharts",
+        npm: "highcharts-vue v1.4.3",
+        link: "https://www.highcharts.com/integrations/vue/",
+      },
+    ],
+  },
+
+  {
+    heading: "table",
+    values: [
+      {
+        name: "React TanStack Table",
+        npm: "@tanstack/react-table v8.10.7",
+        link: "https://tanstack.com/table/v8/docs/adapters/react-table",
+      },
+      {
+        name: "Vue TanStack Table",
+        npm: "@tanstack/vue-table v8.11.6",
+        link: "https://tanstack.com/table/v8/docs/adapters/vue-table",
+      },
+    ],
+  },
+
   {
     heading: "router",
     values: [
@@ -75,6 +124,7 @@ export const HOME_TABLE = [
       },
     ],
   },
+
   {
     heading: "icons",
     values: [

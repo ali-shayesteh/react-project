@@ -4,7 +4,7 @@ import Table from "../../components/table/table";
 import useTable from "../../hooks/useTable";
 
 const Tables = () => {
-  const { data, refreshData, columns } = useTable();
+  const { data, columns } = useTable();
 
   return (
     <PageLayout title={"Tables"} Icon={DocumentTextIcon}>
@@ -14,11 +14,6 @@ const Tables = () => {
           columns,
         }}
       />
-      <hr />
-
-      <div>
-        <button onClick={() => refreshData()}>Refresh Data</button>
-      </div>
     </PageLayout>
   );
 };

@@ -80,7 +80,7 @@ function TableMain({ data, columns }) {
         </tbody>
       </table>
 
-      <div className=" flex justify-between items-center text-slate-700 p-3">
+      <div className="flex justify-between items-center text-slate-700 p-3">
         <div className="flex items-center gap-2">
           <button
             className="border rounded p-1"
@@ -155,7 +155,7 @@ function TableMain({ data, columns }) {
             />
           </span>
           <select
-          className="py-1 px-2 border rounded bg-white"
+            className="py-1 px-2 border rounded bg-white"
             value={table.getState().pagination.pageSize}
             onChange={(e) => {
               table.setPageSize(Number(e.target.value));

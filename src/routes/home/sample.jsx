@@ -5,9 +5,13 @@ import HeadingTwo from "../../components/typography/HeadingTwo";
 import SliderOne from "../sliders/sliderOne";
 import StockChart from "../../components/charts/stockChart";
 import useChart from "../../hooks/useChart";
+import Chart from "../../components/charts/chart";
+import pieChartOptions from "../charts/pieChartOptions";
+import barChartOptions from "../charts/barChartOprions";
+import splineChartOptions from "../charts/splineChartOptions";
 
 const Sample = () => {
-  const { data, refreshData, columns } = useTable();
+  const { data, columns } = useTable();
   const { data: stockData } = useChart();
 
   return (
@@ -17,13 +21,19 @@ const Sample = () => {
 
       <HeadingTwo title={TEXT.chart} />
       <StockChart data={stockData} />
+      <div className="flex-col md:flex-row flex gap-6">
+        <div className="md:basis-1/2">
+          <Chart options={pieChartOptions} />
+        </div>
+        <div className="md:basis-1/2">
+          <Chart options={barChartOptions} />
+        </div>
+      </div>
 
       <HeadingTwo title={TEXT.table} />
       <Table {...{ data, columns }} />
-      <hr />
-      <div>
-        <button onClick={() => refreshData()}>Refresh Data</button>
-      </div>
+
+      <Chart options={splineChartOptions} />
     </div>
   );
 };
